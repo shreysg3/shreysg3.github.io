@@ -11,11 +11,14 @@
 
 <iframe src="plot1.html" width="800" height="500"></iframe>
 
+<p>
 The above visualization is my altair plot for the number of UFO Sightings over time for the top 10 U.S. states with 
 the highest number of reported sightings. The x-axis in my plot represents the year (from 1980 onwards) and
 the y-axis represents the number of reported sightings for that year. Each of the 10 colored lines on the graph represent
 one of the top 10 states we are plotting, which allows the audience to compare sightings by year for the top 10 states easily.
+</p>
 
+<p>
 In terms of the design choices for this plot, I decided to go with a line graph, since we are plotting data over time.
 Technically, a bar graph could have been used as well, but it would have been far more messy and unreadable, since there would
 have been 10 bars for each year mark, which influenced my decision to use a line graph instead. The x-axis of this plot is encoded as
@@ -24,28 +27,39 @@ As mentioned previously, Color is mapped to the categorical variable state, with
 I was plotting, and a legend to the right side indicating which color corresponded to which state. The usage of distinct colors
 makes it very easy for the audience of my visualizations to quickly tell apart differences in trends of UFO sightings for different
 US states, and is a clear and easy way to represent different subsets of the data in this plot.
+</p>
 
+<p>
 As for transformations done on the data for this plot, the first transformation was to add column names to the dataset so that each
 column could be easily referred to. Since the raw data did not have column names, these were added in after the csv file was read in,
 and were important to both plot 1 and plot 2, since both plots referred to the column names extensively. 
+</p>
 
+<p>
 Additionally, each date_seen timestamp was converted into a pandas datetime type, and the year was then extracted from that
 column so we were able to refer to sighting years instead of days or months. This helped us see broader trends in the data
 over a large period of time, instead of having it in a broken up way where trends are almost impossible to analyse.
+</p>
 
+<p>
 Another transformation that was made for plot 1 and 2 was to drop NA values from the state and country columns in our dataset.
 Null state values are useless when trying to compare different sighting metrics across US states, so it did not make sense to keep these
 entries for our plot.
+</p>
 
+<p>
 I also decided to modify the data to only capture sightings from 1980 onwards, instead of all sighting years in the dataset. The reason
 for this decision is because I noticed that prior to 1980, there was not alot of data regarding sightings for any of the top 10 states,
 and the limited number of sightings seemed to be pretty similar for all states being plotted. Therefore, it did not make sense to keep
 these years in the plot, as they were unnecessarily making the plot bigger while not adding any meaningful information, and taking away
 from the important trends and differences in counts we can see post-1980.
+</p>
 
+<p>
 Lastly, I decided to make a transformation in the data to only limit the top 10 states by sighting count from being plotted in our graph.
 This is because, similar to the reason for the 1980-onwards transformation, having all 50 states on the graph would make it cluttered
 without much benefit, since most states have very low number of sightings.
+</p>
 
 <h2>Plot 2: Add title</h2>
 
