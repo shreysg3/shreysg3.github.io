@@ -61,9 +61,41 @@ This is because, similar to the reason for the 1980-onwards transformation, havi
 without much benefit, since most states have very low number of sightings.
 </p>
 
-<h2>Plot 2: Add title</h2>
+<h2>Plot 2: UFO Sightings by Country from 1980 onwards</h2>
 
 <iframe src="plot2.html" width="800" height="500"></iframe>
+
+<p>
+For this visualization, I have decided to show UFO sightings over time across different countries, using the x-axis to represent year
+and using the y-axis to represent the count of sightings. The lines on the graph represent a country, and users are able to swtich
+which country they want to view data for by using the dropdown menu at the bottom of the graph. Since the US has the most data about
+UFO sightings, I have kept the US as the default country.
+</p>
+
+<p>
+  Similar to the first plot, the encodings of the second plot include the year mapped to the x-axis, and the count of UFO sightings mapped
+  to the y-axis. In this plot, I chose not to use the color encoding, as each country is distinctly selected using the dropdown, so
+  there is no instance where more than one country is displayed at a time on the graph. A line chart is appropriate for this graph as well
+  because we want to observe trends over time, which are best depicted through a line graph.
+</p>
+
+<p>
+  As for transformations, transformations to the data for this plot were already done for plot 1, which prevented me from having to do them
+  again. These include adding column names to the dataset, converting dates to datetime format and adding a year column, dropping NA values for
+  the country column, and capturing data from only 1980 onwards due to the reasons listed in the description for plot 1.
+</p>
+
+<p>
+  For the additional interactivity component for this plot, I decided to create a dropdown using which users can select which country they want
+  to view UFO sighting data for. The dropdown includes all countries in the dataset (non-NULL), and selecting any country shows a trend-line of
+  UFO sighting data for that corresponding country. This helps make my visualization more interesting because it gives users the ability to focus
+  in on individual countries of interest instead of having to see them all together. Without this interactive dropdown component, our alternatives
+  would be to either create a plot with all countries data (similar to plot 1 but with countries instead of states), or to create a different plot
+  for each country. Both options are inconvenient, with the first one not allowing users to focus on a singular country's data, and the second one
+  requiring lots of unnecessary space and code. The use of this dropdown is even more important when dealing with data which has more fields, such
+  as city data. There are likely hundreds of different cities in the provided dataset, and it would not be practical to give a graph with all of them
+  or create individual graphs. In those cases as well as my country example, interactive components such as dropdowns are incredibly effective.
+</p>
 
 
 <h3>Links</h3>
