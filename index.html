@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+
 <head>
     <title>UFO Visualizations</title>
 </head>
@@ -9,7 +14,11 @@
 
 <h2>Plot 1: UFO Sightings in top 10 states from 1980 onwards</h2>
 
-<iframe src="plot1.html" width="800" height="500"></iframe>
+<div id="plot1"></div>
+
+<script>
+vegaEmbed('#plot1', 'plot1.json', {actions: false});
+</script>
 
 <p>
 The above visualization is my altair plot for the number of UFO Sightings over time for the top 10 U.S. states with 
@@ -63,7 +72,11 @@ without much benefit, since most states have very low number of sightings.
 
 <h2>Plot 2: UFO Sightings by Country from 1980 onwards</h2>
 
-<iframe src="plot2.html" width="800" height="500"></iframe>
+<div id="plot2"></div>
+
+<script>
+vegaEmbed('#plot2', 'plot2.json', {actions: false});
+</script>
 
 <p>
 For this visualization, I have decided to show UFO sightings over time across different countries, using the x-axis to represent year
